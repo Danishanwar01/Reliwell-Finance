@@ -1,0 +1,138 @@
+/* --------------------------------------
+   Root variables (for colors, gradients)
+   -------------------------------------- */
+:root {
+  --accent-yellow: #f0b90b;
+  --gradient-pink: #e8749e;
+  --dark-bg: #1d1d1d;
+  --text-primary: #ffffff;
+}
+
+/* --------------------------------------
+   Container: 100% width, dark background
+   -------------------------------------- */
+.rxs-container {
+  display: flex;
+  flex-wrap: nowrap;         /* keep two halves side by side */
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  width: 100%;
+
+  min-height: 100vh;         /* if you want full‐screen height */
+}
+
+/* --------------------------------------
+   Left half (50%): heading + feature text
+   -------------------------------------- */
+.left-half {
+  flex: 0 0 50%;
+  padding: 4rem 2rem;         /* top/bottom 4rem, left/right 2rem */
+  box-sizing: border-box;
+}
+
+/* --------------------------------------
+   Main heading (“Unlock…”) inside left-half
+   -------------------------------------- */
+.main-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+/* Gradient effect on the word “Unlock” */
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--gradient-pink) 0%,
+    var(--accent-yellow) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --------------------------------------
+   Feature paragraphs container
+   -------------------------------------- */
+.features-list {
+  margin-top: 1rem;
+  margin-left: 25px;
+}
+
+/* Each feature line: “Heading: description” */
+.feature-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Make “Heading:” inline and yellow */
+.accent-heading {
+  display: inline;
+  color: var(--accent-yellow);
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+/* --------------------------------------
+   Right half (50%): image
+   -------------------------------------- */
+.right-half {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.right-half img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------
+   Responsive adjustments
+   -------------------------------------- */
+@media (max-width: 960px) {
+  .rxs-container {
+    flex-wrap: wrap;        /* allow stacking on tablets/smaller screens */
+  }
+
+  /* Force each half to 100% width */
+  .left-half,
+  .right-half {
+    flex: 0 0 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Here’s the magic: put the image container first */
+  .right-half {
+    order: -1;
+  }
+
+  .main-heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .feature-item {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .feature-item {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,139 @@
+/* src/components/Navbar.css */
+
+/* 1) Navbar: dark background, padding, and drop shadow */
+.navbar-custom {
+  background-color: #1d1d1d; /* Very dark gray (almost black) */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 2) Navbar container: flex layout (Logo | Links | Connect Button) */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 3) Logo/Brand styling */
+.navbar-logo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* 4) Navigation links (for large screens) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Space between each link */
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+/* 5) Underline animation on hover/active */
+/* .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00E5FF; /* Bright cyan underline */
+  /* transition: width 0.3s ease-in-out; */
+/* } */
+ */
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* 6) Connect Wallet button wrapper: gradient border */
+.connect-btn-wrapper {
+  position: relative;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #FF8A00, #E52E71);
+  padding: 2px; /* Thickness of gradient border */
+  display: inline-block;
+}
+
+/* 7) Inner Connect Wallet button styling */
+.connect-btn {
+  background-color: #1F1F1F; /* Very dark gray, matching navbar */
+  color: #ffffff;
+  border: none;
+  border-radius: 28px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: block;
+}
+
+/* 8) Hover state for Connect Wallet button */
+.connect-btn:hover {
+  background-color: #2C2C2C; /* Slightly lighter than #1F1F1F */
+}
+
+/* 9) Hamburger (menu) button: hidden by default on large screens */
+.hamburger-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Shown only on smaller screens */
+}
+
+/* 10) Offcanvas (drawer) container custom styling */
+.offcanvas-custom {
+  background-color: #121212; /* Same dark background as navbar */
+  color: #ffffff;
+}
+
+/* 11) Offcanvas body links: full-width clickable, with bottom border */
+.offcanvas-custom .offcanvas-body a {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 12) Remove bottom border from last link */
+.offcanvas-custom .offcanvas-body a:last-child {
+  border-bottom: none;
+}
+
+/* 13) Offcanvas Connect Wallet button container alignment */
+.offcanvas-connect {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* 14) Responsive breakpoint: hide nav-links and show hamburger */
+@media (max-width: 991px) {
+  .nav-links {
+    display: none; /* Hide links on small screens */
+  }
+  .connect-btn-wrapper {
+    display: none; /* Hide the Connect button on small screens */
+  }
+  .hamburger-btn {
+    display: block; /* Show hamburger menu on small screens */
+  }
+}

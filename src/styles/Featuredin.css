@@ -1,0 +1,72 @@
+/* Container for the entire “Featured In” section */
+.featurein-root {
+  position: relative;
+  margin-top: 48px;
+  padding-top: 16px;
+  /* padding-bottom: 16px; */
+  text-align: center;
+  overflow: hidden;
+  background:#1d1d1d; /* or any background you need */
+}
+
+/* The “Featured In” heading */
+.featurein-title {
+  color: #fff;           /* white text */
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  margin-bottom: 35px;
+}
+
+/* Wrapper that hides overflow and defines marquee area */
+.featurein-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+/* The key container that scrolls horizontally */
+.featurein-marquee {
+  display: flex;
+  white-space: nowrap;
+  /* use CSS variables for speed & direction */
+  animation: scroll-horizontal var(--duration) linear var(--iteration-count)
+    var(--direction);
+}
+
+/* One full set of logos in a row */
+.featurein-logo-row {
+  display: flex;
+  align-items: center;
+  /* keep logos in a single line */
+  white-space: nowrap;
+}
+
+/* Each logo’s styling */
+.featurein-logo-row img {
+  margin-right: 70px;        /* spacing as in your HTML */
+  height: 100px;
+  width: 180px;              /* fix a consistent height */
+  object-fit: contain;
+  /* filter: grayscale(100%); */
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* On hover: restore color and full opacity */
+.featurein-logo-row img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Keyframes for continuously scrolling left → right (adjust if needed) */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

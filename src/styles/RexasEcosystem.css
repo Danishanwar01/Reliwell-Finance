@@ -1,0 +1,195 @@
+/* src/styles/RexasEcosystem.css */
+
+.ecosystem-section {
+  background: #1d1d1d;
+  margin-top: 0%;
+  color: #ffffff;
+}
+
+/* Hero and headline styling remain unchanged */
+
+.hero-image-container {
+  text-align: center;
+}
+
+.ecosystem-hero-image {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 0%;
+  display: inline-block;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 0%;
+}
+
+.ecosystem-headline-line1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0;
+  margin-top: 0%;
+  color: rgb(232, 116, 158);
+  text-transform: uppercase;
+}
+
+.ecosystem-headline-line2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+  top: 0%;
+  color: rgb(240, 185, 11);
+  text-transform: uppercase;
+}
+
+.ecosystem-description {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #e4e7e7;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+/* ───────────────────────────────────────────────────────────────────── */
+/* FEATURES GRID */
+/* ───────────────────────────────────────────────────────────────────── */
+
+.features-grid {
+  margin-top: 60px;
+  margin-left: 5%;
+  margin-right: 4.5%;
+  /* If you’re using a flex or grid container around .feature-card items,
+     you can manage row/column gaps there. */
+}
+
+/* Updated .feature-card: flex container, centered contents, equal vertical spacing */
+.feature-card {
+  position: relative;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  /* Make it a flex column so icon, title, text are stacked and centered */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  /* equal vertical space around items */
+  align-items: center;
+
+  /* Responsive sizing: max 380px wide, but shrink to 100% on narrower containers */
+  width: 100%;
+  max-width: 380px;
+  /* Let height be auto so text can wrap and cards fit content */
+  height: auto;
+  padding: 32px 24px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* The glass‐blur effect */
+  backdrop-filter: blur(8px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(72, 72, 72, 0.5);
+}
+
+/* Icon container: center the PNG at 60% of this box, and allow it to shrink */
+.card-icon {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 20px;
+  /* Center horizontally is automatic under flex + align-items: center */
+}
+
+.card-icon .main-icon {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* redundantly centers inside .card-icon */
+  z-index: 2;
+}
+
+/* Card title */
+.card-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+/* Card text */
+.card-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #e4e7e7;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 8px; /* a bit of breathing room at the bottom */
+}
+
+/* ───────────────────────────────────────────────────────────────────── */
+/* RESPONSIVE ADJUSTMENTS */
+/* ───────────────────────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .ecosystem-headline-line1,
+  .ecosystem-headline-line2 {
+    font-size: 2.5rem;
+  }
+  .ecosystem-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .feature-card {
+    padding: 24px 16px;
+    max-width: 100%; /* allow full width under its container */
+  }
+  .card-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ecosystem-headline-line1,
+  .ecosystem-headline-line2 {
+    font-size: 2rem;
+  }
+  .ecosystem-hero-image {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  .hero-text-container {
+    padding: 0 10px;
+  }
+  .feature-card {
+    padding: 20px 12px;
+  }
+  .card-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-text {
+    font-size: 0.9rem;
+  }
+}

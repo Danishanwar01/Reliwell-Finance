@@ -1,0 +1,33 @@
+/* src/components/MarqueeNotice.css */
+
+
+.marquee-notice-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background:rgb(134, 95, 5);
+}
+
+/* 2. marquee-content flex  */
+.marquee-content {
+  display: flex;
+ color: #fff;
+  font-size: large;
+  animation: marquee-animation 20s linear infinite;
+}
+
+
+.marquee-item {
+  white-space: nowrap;
+  /* padding-right: 100px; gap between two copies */
+}
+
+/* 4. Keyframes animation,  */
+@keyframes marquee-animation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

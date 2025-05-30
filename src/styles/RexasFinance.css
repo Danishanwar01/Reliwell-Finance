@@ -1,0 +1,146 @@
+/* src/components/HeroSection.css */
+
+/* 1) Root wrapper: make sure its background is dark (matching your dark grid) */
+.hero-wrapper {
+  background-color: #1d1d1d; /* nearly black */
+  color: #fff;
+  padding: 80px 20px;        /* adjust top/bottom padding as needed */
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+/* 2) Gradient text for “Rexas Finance” */
+.hero-title {
+  font-size: 3rem;        /* adjust as needed */
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(
+    271.68deg,
+    rgb(232, 18, 118) 40%,
+    rgb(248, 216, 4) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 3) Subtitle below the title */
+.hero-subtitle {
+  font-size: 2rem;  /* adjust as needed */
+  font-weight: 400;
+  margin: 16px 0 32px;
+  text-align: center;
+}
+
+/* 4) Paragraph container */
+.hero-paragraph-container {
+  max-width: 800px;
+  margin: 0 auto 48px auto;
+  text-align: center;
+}
+
+/* 5) Paragraph text */
+.hero-paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 10px;
+  color: #e4e7e7;
+}
+
+/* 6) Button row container */
+.hero-button-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* 7) CardBox wrapper: provides the “floating” button look */
+.cardBox {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 7a) On hover, lift it up slightly */
+.cardBox:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 8) Animation container inside CardBox */
+.card-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 9) Card text (the <h2> inside) common styles */
+.card-content h2 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: inherit;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 9a) Yellow icon + text style for Whitepaper button */
+.card-whitepaper .card-content h2 {
+  color: rgb(240, 185, 11);
+}
+
+/* 9b) White icon + text style for CertiK Audit button */
+.card-audit .card-content h2 {
+  color: #ffffff;
+}
+
+/* 10) “Audited | 100% Secure & Verified By CertiK” text */
+.hero-audit-note {
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  color: #a8b1b1;
+}
+
+/* 11) Social icons row */
+.hero-social-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* 11a) Common SVG styles for social icons */
+.hero-social-row svg {
+  font-size: 28px;
+  color: rgb(240, 185, 11);
+  transition: color 0.2s ease;
+}
+
+/* 11b) On hover, slightly brighten */
+.hero-social-row a:hover svg {
+  color: rgb(255, 205, 0);
+}
+
+/* 12) Make sure <a> tags have no underline */
+.hero-wrapper a {
+  text-decoration: none;
+}
