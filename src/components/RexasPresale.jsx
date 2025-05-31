@@ -4,7 +4,7 @@ import '../styles/RexasPresale.css';
 
 const RexasPresale = () => {
   // Example local state for the "Amount in ETH" input
-  const [ethAmount, setEthAmount] = useState('');
+  const [ethAmount, setEthAmount] = useState();
   
   // Example function to calculate RXS from ETH (you can replace with actual logic)
   const ethToRxs = (eth) => {
@@ -128,7 +128,7 @@ const RexasPresale = () => {
 
         {/* 8) Bottom Links: How To Buy?>, $1 Million Giveaway */}
         <div className="bottom-links-row">
-          <a href="https://Rexas.com/how-to-buy/" target="_blank" rel="noreferrer">
+          <a href="https://Rexas.com/how-to-buy" target="_blank" rel="noreferrer">
             <svg
               stroke="currentColor"
               fill="none"

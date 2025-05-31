@@ -54,7 +54,7 @@
   background: #00E5FF; /* Bright cyan underline */
   /* transition: width 0.3s ease-in-out; */
 /* } */
- */
+ 
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
