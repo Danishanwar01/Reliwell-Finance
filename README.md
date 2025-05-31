@@ -2,7 +2,7 @@
 
 Here's how the app looks in action:
 
-![App Screenshot](../rexas/src/assets/images/image.png)
+![App Screenshot](./images/image.png)
 
 ---
 
