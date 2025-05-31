@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom"; 
 import GTranslate from "./GTranslate";
+import bgimg from '../assets/images/background.png'
 
 const Footer = () => {
   return (
@@ -21,6 +22,7 @@ const Footer = () => {
         color: "#fff",
         px: { xs: 2, md: 3 },
         py: { xs: 4, md: 6 },
+        backgroundImage: `url(${bgimg})`
       }}
     >
       <Container maxWidth="xl">

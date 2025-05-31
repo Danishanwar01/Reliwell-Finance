@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { Box } from '@mui/material';
+import bgimg from '../assets/images/background.png'
 const WinMillion = () => {
   useEffect(() => {
     // Dynamically load the Gleam widget script
@@ -24,6 +25,7 @@ const WinMillion = () => {
     backgroundColor: '#1d1d1d',
     padding: '30px',
     borderRadius: '10px',
+      backgroundImage: `url(${bgimg})`, 
   };
 
   // Center wrapper style (replacing <center> tag)
@@ -34,7 +36,9 @@ const WinMillion = () => {
   return (
     <div style={containerStyle}>
       {/* Inline <style> to define .glow-on-hover since React does not import external CSS here */}
-      <style>{`
+      <style >
+          
+        {`
         .glow-on-hover {
           padding: 12px 24px;
           font-size: 16px;
@@ -100,18 +104,21 @@ const WinMillion = () => {
         display: 'flex',
         justifyContent: 'center',
         mt: 4,      
-        px: 2,      
+        px: 2,  
+          
       }}
     >
       {/* Outer “card” container for the widget */}
       <Box
         sx={{
+         
           backgroundColor: '#1d1d1d',
           borderRadius: '12px',
           p: 2,
           width: {
             xs: '100%',   
             md: '60%',  
+              backgroundImage: `url(${bgimg})`, 
           },
           // Gleam widget CSS custom properties:
           '--glm-widget-radius': '10px',
@@ -126,7 +133,7 @@ const WinMillion = () => {
         <Box
           component="iframe"
           id="GleamEmbedGmQLU"
-          // src="https://gleam.io/GmQLU/embed?l=https%3A%2F%2FReliwell.com%2FReliwell-millionaire%2F&amp;r=https%3A%2F%2Fdashboard.Reliwell.com%2F"
+           src="https://gleam.io/GmQLU/embed?l=https%3A%2F%2FReliwell.com%2FReliwell-millionaire%2F&amp;r=https%3A%2F%2Fdashboard.Reliwell.com%2F"
           allow="storage-access *; attribution-reporting *; autoplay *; fullscreen *"
           title="Competition"
           frameBorder="0"

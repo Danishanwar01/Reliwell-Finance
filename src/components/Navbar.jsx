@@ -1,9 +1,22 @@
-// src/components/Navbar.jsx
-import React from 'react';
+import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import '../styles/Navbar.css';
-import { Link } from 'react-router-dom';
+import "bootstrap/dist/js/bootstrap.bundle";
 
 const Navbar = () => {
+
+  const offcanvasRef = useRef(null);
+
+
+  const closeOffcanvas = () => {
+    const offcanvasEl = offcanvasRef.current;
+    if (!offcanvasEl) return;
+   
+    const bsOffcanvas = window.bootstrap.Offcanvas.getInstance(offcanvasEl) 
+      || new window.bootstrap.Offcanvas(offcanvasEl);
+    bsOffcanvas.hide();
+  };
+
   return (
     <>
       {/* ========================= */}
@@ -18,7 +31,7 @@ const Navbar = () => {
 
           {/* ——— Navigation Links (Visible on large screens) ——— */}
           <div className="nav-links">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/dashboard">Dashboard</Link>
             <Link to="/tokenomics">Tokenomics</Link>
             <Link to="/whitepaper">Whitepaper</Link>
@@ -67,11 +80,12 @@ const Navbar = () => {
         tabIndex="-1"
         id="offcanvasMenu"
         aria-labelledby="offcanvasMenuLabel"
-        style={{background:"#1d1d1d"}}
+        style={{ background: "#1d1d1d" }}
+        ref={offcanvasRef}
       >
         {/* Offcanvas Header: Brand and Close Button */}
         <div className="offcanvas-header border-bottom border-secondary">
-          <h5 className="offcanvas-title" id="offcanvasMenuLabel" style={{color:"#fff"}}>
+          <h5 className="offcanvas-title" id="offcanvasMenuLabel" style={{ color: "#fff" }}>
             Reliwell FINANCE
           </h5>
           <button
@@ -85,18 +99,23 @@ const Navbar = () => {
         {/* Offcanvas Body: Navigation Links + Connect Button */}
         <div className="offcanvas-body">
           {/* ——— Navigation Links (Stacked vertically) ——— */}
-           <Link to="/home">Home</Link>
-          <Link to="/dashboard">Dashboard</Link>
-          <Link to="/tokenomics">Tokenomics</Link>
-          <Link to="/whitepaper">Whitepaper</Link>
-          <Link to="/win1m">Win $1M</Link>
-          <Link to="/howtobuy">How To Buy</Link>
-          <Link to="/contactus">Contact Us</Link>
+          <Link to="/" onClick={closeOffcanvas}>Home</Link>
+          <Link to="/dashboard" onClick={closeOffcanvas}>Dashboard</Link>
+          <Link to="/tokenomics" onClick={closeOffcanvas}>Tokenomics</Link>
+          <Link to="/whitepaper" onClick={closeOffcanvas}>Whitepaper</Link>
+          <Link to="/win1m" onClick={closeOffcanvas}>Win $1M</Link>
+          <Link to="/howtobuy" onClick={closeOffcanvas}>How To Buy</Link>
+          <Link to="/contactus" onClick={closeOffcanvas}>Contact Us</Link>
 
           {/* ——— Connect Wallet Button ——— */}
           <div className="offcanvas-connect">
             <div className="connect-btn-wrapper">
-              <button className="connect-btn">Connect Wallet</button>
+              <button
+                className="connect-btn"
+                onClick={closeOffcanvas}
+              >
+                Connect Wallet
+              </button>
             </div>
           </div>
         </div>

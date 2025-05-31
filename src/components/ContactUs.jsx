@@ -1,6 +1,7 @@
 // src/Contactus.jsx
 
 import React from 'react';
+import bgimg from '../assets/images/background.png'
 
 const Contactus = () => {
   const containerStyle = {
@@ -11,7 +12,8 @@ const Contactus = () => {
     backgroundColor: '#1d1d1d',
     padding: '30px',
     borderRadius: '10px',
-    border:'2px solid white'
+    border:'2px solid white',
+      backgroundImage:  `url(${bgimg})`
   };
 
   const labelStyle = {

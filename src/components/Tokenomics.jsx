@@ -1,9 +1,10 @@
 import React from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
-
+import bgimg from '../assets/images/background.png'
 const Tokenomics = () => {
   return (
     <Container
+    
       maxWidth="xl"
       id="tokenomics"
       sx={{
@@ -11,6 +12,7 @@ const Tokenomics = () => {
         pb: { xs: 6, md: 10 },
         backgroundColor: '#1d1d1d',
         color: '#ffffff',
+        backgroundImage: `url(${bgimg})`,
       }}
     >
       {/* Headline */}

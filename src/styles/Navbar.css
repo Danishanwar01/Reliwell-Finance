@@ -6,6 +6,8 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background-image: url('../assets/images/background.png');
+  
 }
 
 /* 2) Navbar container: flex layout (Logo | Links | Connect Button) */

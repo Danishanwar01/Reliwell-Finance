@@ -4,6 +4,7 @@
   background: #1d1d1d;
   margin-top: 0%;
   color: #ffffff;
+   background-image: url('../assets/images/background.png'); 
 }
 
 /* Hero and headline styling remain unchanged */

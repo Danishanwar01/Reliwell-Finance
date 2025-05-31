@@ -6,7 +6,8 @@
   /* padding-bottom: 16px; */
   text-align: center;
   overflow: hidden;
-  background:#1d1d1d; /* or any background you need */
+  background:#1d1d1d; 
+  background-image: url('../assets/images/background.png');
 }
 
 /* The “Featured In” heading */

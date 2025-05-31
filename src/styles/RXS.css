@@ -6,6 +6,7 @@
   --gradient-pink: #e8749e;
   --dark-bg: #1d1d1d;
   --text-primary: #ffffff;
+  
 }
 
 /* --------------------------------------
@@ -17,7 +18,7 @@
   background-color: var(--dark-bg);
   color: var(--text-primary);
   width: 100%;
-
+background-image: url('../assets/images/background.png');
   min-height: 100vh;         /* if you want full‐screen height */
 }
 

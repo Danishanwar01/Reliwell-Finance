@@ -10,6 +10,7 @@ import {
   Link,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
+import bgimg from '../assets/images/background.png'
 
 const faqsData = [
   {
@@ -108,6 +109,7 @@ const FAQS = () => {
         backgroundColor: "#1d1d1d",
         color: "#fff",
         py: 6,
+        backgroundImage: `url(${bgimg})`,
       }}
     >
       <Container maxWidth="lg">

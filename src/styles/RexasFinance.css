@@ -10,6 +10,7 @@
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   line-height: 1.5;
   letter-spacing: 0.00938em;
+   background-image: url('../assets/images/background.png'); 
 }
 
 /* 2) Gradient text for “Rexas Finance” */

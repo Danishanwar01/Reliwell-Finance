@@ -26,7 +26,7 @@ const App = () => {
        <MarqueeNotice/>
    <Navbar/>
       <Routes>
-        <Route path="/home" element={<Home/>} />
+        <Route path="/" element={<Home/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
         <Route path='/tokenomics' element={<Tokenomics/>}/>
         <Route path='/win1m' element={<WinMillion/>}/>

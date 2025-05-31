@@ -1,6 +1,7 @@
 // src/HowToBuy.jsx
 
 import React from 'react';
+import bgimg from '../assets/images/background.png'
 
 const HowToBuy = () => {
   const containerStyle = {
@@ -11,6 +12,7 @@ const HowToBuy = () => {
     borderRadius: '10px',
     color: '#fff',
     fontFamily: 'Arial, sans-serif',
+      backgroundImage: `url(${bgimg})`, 
   };
 
   const centerText = {
